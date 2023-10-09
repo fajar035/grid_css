@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,700;1,6..12,300&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  background-color: #ddd;
+  font-size: 18px;
+  margin: 50px;
+}
+
+.container {
+  display: grid;
+  gap: 10px;
+}
+
+/* Header */
+.header {
+  display: grid;
+  grid-template-areas:
+    "hero hero product1"
+    "hero hero product2";
+}
+
+.header__hero {
+  grid-area: hero;
+  min-height: 300px;
+  background-image: url(assets/hoddie1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.header__hero > * {
+  display: none;
+}
+
+.header__product {
+  background-color: black;
+  color: white;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  background-position: center;
+  background-size: 105px;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+}
+
+.product--product1 {
+  grid-area: product1;
+  background-image: url(assets/hoddie2.jpg);
+}
+
+.product--product2 {
+  grid-area: product2;
+  background-image: url(assets/tshirt2.jpg);
+}
+
+.product__title {
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
+.product__price {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+/* NAVIGASI */
+
+.nav {
+  order: -1;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  /* background-color: red; */
+}
+
+.nav__brand {
+  font-size: 1.5em;
+  color: #333;
+  font-weight: 700;
+}
+
+.nav__menu {
+  display: grid;
+  width: 100%;
+  list-style: none;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  transition: all 0.3s;
+}
+
+.nav__menu li {
+  background-color: #000;
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  padding: 5px;
+}
+
+.nav__menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.open {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.open li {
+  background-color: transparent;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.service {
+  background-color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.1) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.25) 0px 1px 3px -1px;
+}
+
+.service__icon {
+  font-size: 3em;
+}
+
+.service__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.service__subtitle {
+  font-size: 14px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.gallery__title {
+  grid-column: 1 / -1;
+  margin: 10px 0;
+}
+
+.gallery img {
+  border-radius: 10px;
+}
+
+/* HAMBURGER MENU */
+
+.btn11 {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  top: 10px;
+  right: 20px;
+  transition-duration: 0.5s;
+  display: none;
+  background-color: transparent;
+  z-index: 999;
+}
+.btn11 .icon-left {
+  transition-duration: 0.5s;
+  position: absolute;
+  height: 4px;
+  width: 15px;
+  top: 18px;
+  left: 5px;
+  background-color: #fff;
+}
+.btn11 .icon-left:before {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: 15px;
+  height: 4px;
+  background-color: #fff;
+  content: "";
+  top: -10px;
+}
+.btn11 .icon-left:after {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: 15px;
+  height: 4px;
+  background-color: #fff;
+  content: "";
+  top: 10px;
+}
+.btn11 .icon-left:hover {
+  cursor: pointer;
+}
+.btn11 .icon-right {
+  transition-duration: 0.5s;
+  position: absolute;
+  height: 4px;
+  width: 15px;
+  top: 18px;
+  background-color: #fff;
+  left: 20px;
+}
+.btn11 .icon-right:before {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: 15px;
+  height: 4px;
+  background-color: #fff;
+  content: "";
+  top: -10px;
+}
+.btn11 .icon-right:after {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: 15px;
+  height: 4px;
+  background-color: #fff;
+  content: "";
+  top: 10px;
+}
+.btn11.open .icon-left {
+  transition-duration: 0.5s;
+  background: transparent;
+}
+.btn11.open .icon-left:before {
+  transform: rotateZ(45deg) scaleX(1.4) translate(2px, 2px);
+}
+.btn11.open .icon-left:after {
+  transform: rotateZ(-45deg) scaleX(1.4) translate(2px, -2px);
+}
+.btn11.open .icon-right {
+  transition-duration: 0.5s;
+  background: transparent;
+}
+.btn11.open .icon-right:before {
+  transform: rotateZ(-45deg) scaleX(1.4) translate(-2px, 2px);
+}
+.btn11.open .icon-right:after {
+  transform: rotateZ(45deg) scaleX(1.4) translate(-2px, -2px);
+}
+.btn11:hover {
+  cursor: pointer;
+}
+
+/* HAMBURGER MENU */
+
+/* RESPONSIVE  */
+
+@media (max-width: 1024px) {
+  .nav {
+    order: inherit;
+    grid-template-columns: 1fr;
+  }
+
+  .nav__brand {
+    display: none;
+  }
+
+  .header__hero > * {
+    display: block;
+    color: #fff;
+  }
+
+  .header__title {
+    font-size: 2em;
+    font-weight: 700;
+  }
+
+  .header__subtitle {
+    font-size: 1.5em;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: 50px 20px;
+  }
+  .header {
+    margin-top: 20px;
+  }
+  .nav__menu {
+    display: none;
+    opacity: 0;
+    transform: translateY(-100%);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #333;
+  }
+
+  .btn11 {
+    display: block;
+    background-color: #333;
+    border-radius: 3px;
+  }
+
+  .header__hero {
+    padding: 20px;
+  }
+
+  .header__title,
+  .product__title {
+    font-size: 1.5em;
+  }
+
+  .header__subtitle,
+  .product__price {
+    font-size: 1em;
+  }
+
+  .header__product {
+    align-content: end;
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 550px) {
+  .header {
+    grid-template-areas:
+      "hero"
+      "product1"
+      "product2";
+    gap: 10px;
+  }
+}

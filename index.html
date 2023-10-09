@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="container">
+      <header class="header">
+        <div class="header__hero">
+          <h2 class="header__title">Fashion</h2>
+          <p class="header__subtitle">Hoddie & T-Shirt</p>
+        </div>
+        <div class="header__product product--product1">
+          <p class="product__title">Hoddie</p>
+          <p class="product__price">Rp. 350K</p>
+        </div>
+        <div class="header__product product--product2">
+          <p class="product__title">T-Shirt</p>
+          <p class="product__price">Rp. 175K</p>
+        </div>
+      </header>
+
+      <nav class="nav">
+        <div class="nav__brand">
+          <p>Fashion</p>
+        </div>
+        <ul class="nav__menu" id="menu">
+          <li>
+            <a href="">Home</a>
+          </li>
+          <li>
+            <a href="">Products</a>
+          </li>
+          <li>
+            <a href="">About</a>
+          </li>
+          <li>
+            <a href="">Gallery</a>
+          </li>
+        </ul>
+        <div class="btn11" id="hamburger">
+          <div class="icon-left"></div>
+          <div class="icon-right"></div>
+        </div>
+      </nav>
+
+      <section class="services">
+        <div class="service">
+          <div class="service__icon">💻</div>
+          <h3 class="service__title">Tutorials</h3>
+          <p class="service__subtitle">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            aut excepturi optio neque nemo perferendis fugiat, similique totam,
+            voluptatum, dignissimos voluptatem.
+          </p>
+        </div>
+        <div class="service">
+          <div class="service__icon">🎓</div>
+          <h3 class="service__title">Online Course</h3>
+          <p class="service__subtitle">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            aut excepturi optio neque nemo perferendis fugiat, similique totam,
+            voluptatum, dignissimos voluptatem.
+          </p>
+        </div>
+        <div class="service">
+          <div class="service__icon">🎙️</div>
+          <h3 class="service__title">Podcast</h3>
+          <p class="service__subtitle">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            aut excepturi optio neque nemo perferendis fugiat, similique totam,
+            voluptatum, dignissimos voluptatem.
+          </p>
+        </div>
+        <div class="service">
+          <div class="service__icon">👕</div>
+          <h3 class="service__title">Merch</h3>
+          <p class="service__subtitle">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            aut excepturi optio neque nemo perferendis fugiat, similique totam,
+            voluptatum, dignissimos voluptatem.
+          </p>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <h2 class="gallery__title">Gallery</h2>
+
+        <img src="https://source.unsplash.com/random/201x201" alt="" />
+        <img src="https://source.unsplash.com/random/202x202" alt="" />
+        <img src="https://source.unsplash.com/random/203x203" alt="" />
+        <img src="https://source.unsplash.com/random/204x204" alt="" />
+        <img src="https://source.unsplash.com/random/205x205" alt="" />
+        <img src="https://source.unsplash.com/random/206x206" alt="" />
+        <img src="https://source.unsplash.com/random/207x207" alt="" />
+        <img src="https://source.unsplash.com/random/208x208" alt="" />
+        <img src="https://source.unsplash.com/random/209x209" alt="" />
+        <img src="https://source.unsplash.com/random/2010x2010" alt="" />
+      </section>
+    </section>
+
+    <script>
+      const button = document.getElementById("hamburger");
+      const menu = document.getElementById("menu");
+      button.addEventListener("click", () => {
+        button.classList.toggle("open");
+        menu.classList.toggle("open");
+      });
+    </script>
+  </body>
+</html>
